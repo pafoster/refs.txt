@@ -22,7 +22,7 @@ x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Co
 ```
 
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
-* Creation dates are mandatory (Non-breaking change to ensure that completed items sort correctly)
+* Creation dates are mandatory (Non-breaking change to ensure that items marked as 'completed' sort correctly)
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
 * Optional reference key using `#` token (Non-breaking change)
 
