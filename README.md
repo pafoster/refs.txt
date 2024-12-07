@@ -14,7 +14,7 @@ Being a derivative of todo.txt, the central feature of refs.txt is that any give
 |     |       |      |                 |               ┌─── Optional - Title
 │     │       │      │                 │               |    Tags (optional) can be placed anywhere within it
 │ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌──────────┴───────────┐ ┌─┴──────────────────────────────────────────────────────────────────────────┐
-x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @journal doi:10/b39t
+x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @article doi:10/b39t
                                                                                             └────────┬───────┘ └───┬──┘ └────┬────┘
                                                                     collection tag ──────────────────┘             │         │
                                                                   publication type ────────────────────────────────┘         │
