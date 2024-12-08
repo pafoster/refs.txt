@@ -11,7 +11,7 @@ Being a derivative of todo.txt, the central feature of refs.txt is that any give
 │     │       │      ┌───────────────────────────────────── Required - Creation date
 │     │       │      │                 ┌─────────────────── Optional - Reference key
 |     |       |      |                 |               ┌─── Required - Title
-│     │       │      │                 │               |    tags (optional) may appear anywhere within it
+│     │       │      │                 │               |    additional tags (optional) may appear anywhere within it
 │ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌──────────┴───────────┐ ┌─┴────────────────────────────────────────────────────────────────────────────┐
 x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @myProject doi:10/b39t
                                                                                             └────────┬───────┘ └────┬───┘ └────┬────┘
