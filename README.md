@@ -19,7 +19,7 @@ x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Co
                                                               publication type tag ────────────────────────────────┘         │
                                                              special key-value tag ──────────────────────────────────────────┘
 ```
-The completion marker, creation/completion date, priority, reference key and title may only appear in the order listed above in the diagram. In this way, items are guaranteed to appear in the following order after a lexicographical sort:
+The completion marker, creation/completion date, priority, reference key and title must appear in the order listed above in the diagram. In this way, items are guaranteed to appear in the following order after a lexicographical sort:
 1. Items with a priority and not marked complete
 2. Items without a priority and not marked complete
 3. Items marked complete
