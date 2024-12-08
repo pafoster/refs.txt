@@ -69,7 +69,7 @@ None of these are valid items:
 ```
 A Mathematical Theory of Communication
 2016-04-30 #shannon1948mathematical
-2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication #foo
+2016-04-30 A Mathematical Theory of Communication #shannon1948mathematical #foo
 ```
 ### Complete Tasks
 ## Format Specification
