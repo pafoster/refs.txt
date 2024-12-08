@@ -110,5 +110,5 @@ x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
     
 ### Key-Value Tags
 Tool developers may define functionality (e.g. formatting rules) around key-value tags. Common key-value tags are:
-* `h:1` specifies that an item should be hidden from view. We can use this to pre-register certain topic/project tags for auto-completion.
+* `h:1` specifies that an item should be hidden from view. We can use this to pre-register certain topic/project tags for auto-completion and give them a description, e.g. `0001-01-01 h:1 @thesis/ch1 Chapter 1`.
 * `doi:myDoi` specifies a DOI.
