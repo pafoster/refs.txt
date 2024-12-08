@@ -9,7 +9,7 @@ Being a derivative of todo.txt, the central feature of refs.txt is that any give
 │     │       ┌─────────────────── Optional - Marks priority e.g. "I should read this today"
 │     │       │      ┌──────────── Required - Creation date
 |     |       |      |        ┌─── Required - Title
-│     │       │      │        |    additional tags (optional) may appear anywhere within it
+│     │       │      │        |    additional tags (optional) may appear anywhere within title
 │ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌─┴─────────────────────────────────────────────────────────────────────────────────────────────────────┐
 x 2016-05-20 (A) 2016-04-30 A Mathematical Theory of Communication #shannon1948mathematical +informationTheory @myProject doi:10/b39t
                                                                    └───────────┬──────────┘ └────────┬───────┘ └────┬───┘ └────┬────┘
