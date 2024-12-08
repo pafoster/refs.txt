@@ -49,7 +49,7 @@ If you are already familiar with todo.txt, you will notice mainly semantic diffe
 ### Complete Tasks
 ## Format Specification
 
-## Key-Value Tags
+### Key-Value Tags
 
 Tool developers may define additional formatting rules for extra metadata.
 
