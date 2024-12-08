@@ -88,7 +88,25 @@ x2016-05-20 2016-04-30 A Mathematical Theory of Communication
 x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 ```
 
-## Format Specification
+## ref.txt Format Specification
+* The recommended encoding is UTF-8
+* The recommended line separator is `\n`
+* Lines must either be empty or start with a printable character
+* Items must have a title
+* The title must be preceded by a creation date in the format YYYY-MM-DD
+* The creation date may be preceded by an optional priority in the format (P)
+* The priority class should be a capital letter in the set [A-Z]
+* Items may optionally be marked as 'complete', the recommended completion marker `x` must appear at the start of the line
+* Items marked as complete may include an optional completion date in the format YYYY-MM-DD
+* The completion date (if present) must appear after the completion marker and before the creation date. The completion date (if present) must appear before the priority (if present).
+* Tags may appear anywhere in the title
+* The title should contain no more than 1 reference tag.
+* An item's reference tag should be human-readable and unique to the item; the recommended format is authorYearKeyword. 
+* The title may contain any number of topic or project tags, however no distinct topic or project tag should occur more than once in the title.
+* The title may contain any number of special key-value tags, however no distinct key should occur more than once in the title.
+* Completion marker, start date, priority, end date, and title must be separated by the same whitespace character combination. It is recommended to use 1 space as the separator.
+* Tags must be separated by 1 or more whitespace characters. It is recommended to use 1 space as the separator.
+* With the exception of keys (which should consist of characters in the set [a-z]), tags should consist of printable characters.
 
 ### Key-Value Tags
 
