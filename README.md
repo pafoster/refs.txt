@@ -32,7 +32,7 @@ Lines in refs.txt are intentionally terse approximations of bibliographic refere
 |   |-- manuscript.pdf
 |   |-- manuscript.txt
 |   |-- notes.txt
-|   `-- ref.bib
+|   `-- reference.bib
 ...  (Other directories omitted for brevity)
 ```
 ## refs.txt versus todo.txt
