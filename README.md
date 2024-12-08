@@ -24,8 +24,17 @@ The completion marker, creation/completion date, priority, reference key and tit
 2. Items without a priority and not marked complete
 3. Items marked complete
 
-Lines in refs.txt are intentionally terse approximations of bibliographic references. The optional reference key is a human-readable identifier that is unique to each item and which is used to link to more comprehensive bibliographic information. To this end, the reference key should be the name of a directory containing any files related to the item, such as BibTeX/RIS entries as well as PDFs and notes. 
-
+Lines in refs.txt are intentionally terse approximations of bibliographic references. The optional reference key is a human-readable identifier that is unique to each item and which is used to link to more comprehensive bibliographic information. To this end, the reference key should be the name of a directory containing any files related to the item, such as BibTeX/RIS entries as well as PDFs and notes. For example, your directory structure might look like this:
+```
+.
+|-- refs.txt
+|-- shannon1948mathematical   
+|   |-- manuscript.pdf
+|   |-- manuscript.txt
+|   |-- notes.txt
+|   `-- ref.bib
+...  (Other directories omitted)
+```
 ## refs.txt versus todo.txt
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
 * Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly)
