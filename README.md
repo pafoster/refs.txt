@@ -36,12 +36,12 @@ Lines in refs.txt are (intentionally terse) approximations of bibliographic refe
 ```
 ## refs.txt versus todo.txt
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
-* Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly)
+* Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly). 
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
 * Optional reference tag using `#` token (Non-breaking change)
 * Colons are permitted in the value of key-value tags
 
-If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management.
+If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management. However, I felt that it is useful to introduce stricter requirements about dates and sorting than todo.txt, given that our data are likely to be less ephemeral.
 
 ## Advantages of Plain Text
 * Simplicity (no databases)
