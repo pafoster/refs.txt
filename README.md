@@ -106,7 +106,7 @@ x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 * The title may contain any number of special key-value tags, however no distinct key should occur more than once in the title.
 * Completion marker, start date, priority, end date, and title must be separated by the same whitespace character combination. It is recommended to use 1 space as the separator.
 * Tags must be separated by 1 or more whitespace characters. It is recommended to use 1 space as the separator.
-* With the exception of keys (which should consist of lowercase letters in the set [a-z]), tags may comprise all printable characters. Topic and project tags may specify (flat) hierarchies using the `/` character.
+* With the exception of keys (which should consist of lowercase letters in the set [a-z]), tags may comprise all printable characters. Topic and project tags may specify (flat) hierarchies using the `/` character, e.g. `@thesis/chapter1`.
     
 ### Key-Value Tags
 Tool developers may define functionality (e.g. formatting rules) around key-value tags. Common key-value tags are:
