@@ -8,7 +8,7 @@ Being a derivative of todo.txt, the central feature of refs.txt is that any give
 │     ┌──────────────────────────────────────────────────── Optional - Completion date
 |     |                                                     (may only be specified if marked complete)
 │     │       ┌──────────────────────────────────────────── Optional - Marks priority e.g. "I should read this today"
-│     │       │      ┌───────────────────────────────────── Mandatory - Creation date
+│     │       │      ┌───────────────────────────────────── Required - Creation date
 │     │       │      │                 ┌─────────────────── Optional - Reference key
 |     |       |      |                 |               ┌─── Required - Title
 │     │       │      │                 │               |    tags (optional) may appear anywhere within it
@@ -28,7 +28,7 @@ The information in a `refs.txt` item is an intentionally terse representation of
 
 ## refs.txt versus todo.txt
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
-* Creation dates are mandatory (Non-breaking change to ensure that items marked as 'completed' sort correctly)
+* Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly)
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
 * Optional reference key using `#` token (Non-breaking change)
 
