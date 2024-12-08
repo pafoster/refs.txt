@@ -76,11 +76,10 @@ At minimum, a valid item which has been marked as completed looks like this:
 ```
 x 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 ```
-None of these are valid items:
+Neither of these are valid items:
 ```
 x2016-05-20 2016-04-30 A Mathematical Theory of Communication
 x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
- x 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 ```
 
 ## Format Specification
