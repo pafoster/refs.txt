@@ -31,6 +31,7 @@ As of the most recent release, refs.txt differs in syntax from [todo.txt](https:
 * Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly)
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
 * Optional reference key using `#` token (Non-breaking change)
+* Colons are permitted in the value of key-value tags
 
 If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management.
 
