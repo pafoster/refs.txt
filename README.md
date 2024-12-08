@@ -41,7 +41,7 @@ As of the most recent release, refs.txt differs in syntax from [todo.txt](https:
 * Optional reference tag using `#` token (Non-breaking change)
 * Colons are permitted in the value of key-value tags
 
-If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management. Among the above syntactic differences, it seems useful to introduce stricter requirements about dates and sorting than todo.txt, given that our data are likely to be less ephemeral.
+If you are already familiar with todo.txt, you will notice mainly semantic differences. Among the above syntactic differences, it seems useful to introduce stricter requirements about dates and sorting than todo.txt, given that our data are unlikely to be ephemeral.
 
 ## Advantages of Plain Text
 * Simplicity (no databases)
