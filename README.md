@@ -57,3 +57,6 @@ Developers should use the format `key:value` to define additional metadata (e.g.
 
 TODO fix - Both `key` and `value` must consist of non-whitespace characters, which are not colons. Only one colon separates the `key` and `value`.
 
+TODO h:1 to hide an item
+TODO ! comment h:1 for comments
+TODO h:1 version:refs.txt_v1
