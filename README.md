@@ -74,10 +74,15 @@ A Mathematical Theory of Communication
 ### Items Marked Complete
 At minimum, a valid item which has been marked as completed looks like this:
 ```
+x 2016-04-30 A Mathematical Theory of Communication
+```
+Items may include an optional completion date:
+```
 x 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 ```
-Neither of these are valid items:
+None of these are valid items:
 ```
+2016-05-20 2016-04-30 A Mathematical Theory of Communication
 x2016-05-20 2016-04-30 A Mathematical Theory of Communication
 x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 ```
