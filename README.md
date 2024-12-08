@@ -5,7 +5,7 @@ Being a derivative of todo.txt, the central feature of refs.txt is that any give
 ```
 ┌───────────────────────────────── Optional - Marks completion e.g. "I've read/annotated this"
 │     ┌─────────────────────────── Optional - Completion date
-|     |                            (may only be specified if marked complete)
+|     |                            (may be specified only if marked complete)
 │     │       ┌─────────────────── Optional - Marks priority e.g. "I should read this today"
 │     │       │      ┌──────────── Required - Creation date
 |     |       |      |        ┌─── Required - Title
