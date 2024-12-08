@@ -36,8 +36,13 @@ As of the most recent release, refs.txt differs in syntax from [todo.txt](https:
 If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management.
 
 ## Advantages of Plain Text
-
-Plain text is software and operating system agnostic. It's searchable, portable, lightweight, and easily manipulated. It's unstructured. It works when someone else's web server is down or your Outlook .PST file is corrupt. There's no exporting and importing, no databases or tags or flags or stars or prioritizing or _insert company name here_-induced rules on what you can and can't do with it.
+* Simplicity (no databases)
+* Few dependencies (editor and/or basic command line utilities)
+* Extensible entry/search/filtering/manipulation using standard tools
+* Portability
+* Avoids lock-in / data conversion effort
+* Light on resources (Hello [Electron](https://www.electronjs.org/docs/latest))
+* Easy to version (e.g. using git)
 
 ## Examples
 ### Incomplete tasks
