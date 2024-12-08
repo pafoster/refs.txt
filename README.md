@@ -1,30 +1,30 @@
 # refs.txt
 
-refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for representing tasks and their priorities, refs.txt is intended for representing personal collections of bibliographic references (e.g. articles, theses, technical reports) which typically have associated files (e.g. BibTeX entries, PDFs, notes). Both are intended for easy entry, search, filtering and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to reference management software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
+refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for representing tasks and their priorities, refs.txt is intended for representing personal collections of bibliographic references (e.g. articles, theses, technical reports) with associated files (e.g. BibTeX entries, PDFs, notes). Both are intended for easy entry, search, filtering and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to reference management software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
 
 Being a derivative of todo.txt, the central feature of refs.txt is that any given item in your collection is represented using a single (human-readable) line in your refs.txt file. Items have the following structure (diagram credit [dinosv](https://github.com/todotxt/todo.txt/pull/68)):
 ```
-┌────────────────────────────────────────────────────────── Optional - Marks completion e.g. "I've read/annotated this"
-│     ┌──────────────────────────────────────────────────── Optional - Completion date
-|     |                                                     (may only be specified if marked complete)
-│     │       ┌──────────────────────────────────────────── Optional - Marks priority e.g. "I should read this today"
-│     │       │      ┌───────────────────────────────────── Required - Creation date
-│     │       │      │                 ┌─────────────────── Optional - Reference key
-|     |       |      |                 |               ┌─── Required - Title
-│     │       │      │                 │               |    additional tags (optional) may appear anywhere within it
-│ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌──────────┴───────────┐ ┌─┴────────────────────────────────────────────────────────────────────────────┐
-x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @myProject doi:10/b39t
-                                                                                            └────────┬───────┘ └────┬───┘ └────┬────┘
-                                                                         topic tag ──────────────────┘              │          |
-                                                                       project tag ─────────────────────────────────┘          │
-                                                             special key-value tag ────────────────────────────────────────────┘
+┌───────────────────────────────── Optional - Marks completion e.g. "I've read/annotated this"
+│     ┌─────────────────────────── Optional - Completion date
+|     |                            (may only be specified if marked complete)
+│     │       ┌─────────────────── Optional - Marks priority e.g. "I should read this today"
+│     │       │      ┌──────────── Required - Creation date
+|     |       |      |        ┌─── Required - Title
+│     │       │      │        |    additional tags (optional) may appear anywhere within it
+│ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌─┴────────────────────────────────────────────────────────────────────────────┐
+x 2016-05-20 (A) 2016-04-30 A Mathematical Theory of Communication #shannon1948mathematical +informationTheory @myProject doi:10/b39t
+                                                                   └───────────┬──────────┘ └────────┬───────┘ └────┬───┘ └────┬────┘
+                                                              reference tag ───┘                     |              |          |
+                                                                  topic tag ─────────────────────────┘              │          |
+                                                                project tag ────────────────────────────────────────┘          │
+                                                      special key-value tag ───────────────────────────────────────────────────┘
 ```
-The completion marker, creation/completion date, priority, reference key and title must appear in the order listed in the diagram above. In this way, items are guaranteed to appear in the following order after a lexicographical sort:
+The completion marker, creation/completion date, priority and title must appear in the order listed in the diagram above. In this way, items are guaranteed to appear in the following order after a lexicographical sort:
 1. Items with a priority and not marked complete
 2. Items without a priority and not marked complete
 3. Items marked complete
 
-Lines in refs.txt are (intentionally terse) approximations of bibliographic references with additional metadata. The optional reference key is a human-readable identifier that is unique to each item and which is used to link to more comprehensive bibliographic information. To this end, the reference key should be the name of a directory containing any files related to the item, such as BibTeX/RIS entries as well as PDFs and notes. Continuing with the previous example, your directory structure might look like this:
+Lines in refs.txt are (intentionally terse) approximations of bibliographic references with additional metadata. The optional reference tag is a human-readable identifier that is unique to each item and which is used to link to more comprehensive bibliographic information. The reference tag might be the name of a directory containing any files related to the item, such as BibTeX/RIS entries as well as PDFs and notes. Thus, continuing with the previous example, your directory structure might look like this:
 ```
 .
 |-- refs.txt
@@ -39,7 +39,7 @@ Lines in refs.txt are (intentionally terse) approximations of bibliographic refe
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
 * Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly)
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
-* Optional reference key using `#` token (Non-breaking change)
+* Optional reference tag using `#` token (Non-breaking change)
 * Colons are permitted in the value of key-value tags
 
 If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management.
@@ -55,6 +55,22 @@ If you are already familiar with todo.txt, you will notice mainly semantic diffe
 
 ## Examples
 ### Incomplete Tasks
+At minimum, a valid item looks like this:
+```
+2016-04-30 A Mathematical Theory of Communication
+```
+These are valid alternatives:
+```
+(A) 2016-04-30 A Mathematical Theory of Communication
+2016-04-30 A Mathematical Theory of Communication #shannon1948mathematical 
+2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +topic1 +topic2 @myProject1 @myProject2
+```
+None of these are valid items:
+```
+A Mathematical Theory of Communication
+2016-04-30 #shannon1948mathematical
+2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication #foo
+```
 ### Complete Tasks
 ## Format Specification
 
