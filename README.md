@@ -53,7 +53,7 @@ If you are already familiar with todo.txt, you will notice mainly semantic diffe
 * Easy to version and share (e.g. using git)
 
 ## Examples
-### Items Marked Incomplete
+### Items Not Marked Complete
 At minimum, a valid item looks like this:
 ```
 2016-04-30 A Mathematical Theory of Communication
