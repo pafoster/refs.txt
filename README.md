@@ -1,6 +1,6 @@
 # refs.txt
 
-refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for representing tasks and their priorities, refs.txt is intended for representing personal collections of bibliographic references (e.g. articles, theses, technical reports). Both are intended for easy entry, search, filtering and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to reference management software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
+refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for representing tasks and their priorities, refs.txt is intended for representing personal collections of bibliographic references (e.g. articles, theses, technical reports) which typically have associated files (e.g. BibTeX entries, PDFs, notes). Both are intended for easy entry, search, filtering and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to reference management software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
 
 Being a derivative of todo.txt, the central feature of refs.txt is that any given item in your collection is represented using a single (human-readable) line in your refs.txt file. Items have the following structure (diagram credit [dinosv](https://github.com/todotxt/todo.txt/pull/68)):
 ```
@@ -12,12 +12,12 @@ Being a derivative of todo.txt, the central feature of refs.txt is that any give
 │     │       │      │                 ┌─────────────────── Optional - Reference key
 |     |       |      |                 |               ┌─── Required - Title
 │     │       │      │                 │               |    tags (optional) may appear anywhere within it
-│ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌──────────┴───────────┐ ┌─┴──────────────────────────────────────────────────────────────────────────┐
-x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @article doi:10/b39t
-                                                                                            └────────┬───────┘ └───┬──┘ └────┬────┘
-                                                                    collection tag ──────────────────┘             │         |
-                                                              publication type tag ────────────────────────────────┘         │
-                                                             special key-value tag ──────────────────────────────────────────┘
+│ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌──────────┴───────────┐ ┌─┴────────────────────────────────────────────────────────────────────────────┐
+x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @myProject doi:10/b39t
+                                                                                            └────────┬───────┘ └────┬───┘ └────┬────┘
+                                                                         topic tag ──────────────────┘              │          |
+                                                                       project tag ─────────────────────────────────┘          │
+                                                             special key-value tag ────────────────────────────────────────────┘
 ```
 The completion marker, creation/completion date, priority, reference key and title must appear in the order listed in the diagram above. In this way, items are guaranteed to appear in the following order after a lexicographical sort:
 1. Items with a priority and not marked complete
