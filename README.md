@@ -45,9 +45,9 @@ If you are already familiar with todo.txt, you will notice mainly semantic diffe
 * Easy to version and share (e.g. using git)
 
 ## Examples
-### Incomplete tasks
-### Complete tasks
-## Format specification
+### Incomplete Tasks
+### Complete Tasks
+## Format Specification
 
 ## Key-Value Tags
 
