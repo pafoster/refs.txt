@@ -26,7 +26,7 @@ The completion marker, creation/completion date, priority, reference key and tit
 
 Lines in refs.txt are intentionally terse approximations of bibliographic references. The optional reference key is a human-readable identifier that is unique to each item and which is used to link to more comprehensive bibliographic information. To this end, the reference key should be the name of a directory containing any files related to the item, such as BibTeX/RIS entries as well as PDFs and notes. 
 
-## refs.txt vs. todo.txt
+## refs.txt versus todo.txt
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
 * Creation dates are required (Non-breaking change to ensure that items marked as 'completed' sort correctly)
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
