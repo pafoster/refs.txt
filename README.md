@@ -1,26 +1,32 @@
-# What is refs.txt?
+# refs.txt
 
-refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for tasks and their priorities, refs.txt is intended for personal collections of bibliographical references (e.g. articles, theses, technical reports). Both are intended for easy entry, search and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to using [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
+refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for representing tasks and their priorities, refs.txt is intended for representing personal collections of bibliographic references (e.g. articles, theses, technical reports). Both are intended for easy entry, search, filtering and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
 
 Being a derivative of todo.txt, the central feature of refs.txt is that any given item in your collection is represented using a single (human-readable) line in your refs.txt file. Items have the following structure (diagram adapted from [existing PR](https://github.com/todotxt/todo.txt/pull/68/files#)):
-
 ```
 ┌────────────────────────────────────────────────────────── Optional - Marks completion e.g. "I've read/annotated this"
 │     ┌──────────────────────────────────────────────────── Optional - Completion date
+|     |                                                     (may only be specified if marked complete)
 │     │       ┌──────────────────────────────────────────── Optional - Marks priority e.g. "I should read this today"
 │     │       │      ┌───────────────────────────────────── Mandatory - Creation date
 │     │       │      │                 ┌─────────────────── Optional - Reference key
-|     |       |      |                 |                    (must be specified if title is missing)
-|     |       |      |                 |               ┌─── Optional - Title
-│     │       │      │                 │               |    Tags (optional) can be placed anywhere within it
+|     |       |      |                 |               ┌─── Required - Title
+│     │       │      │                 │               |    tags (optional) may appear anywhere within it
 │ ┌───┴────┐ ┌┴┐ ┌───┴────┐ ┌──────────┴───────────┐ ┌─┴──────────────────────────────────────────────────────────────────────────┐
 x 2016-05-20 (A) 2016-04-30 #shannon1948mathematical A Mathematical Theory of Communication +informationTheory @article doi:10/b39t
                                                                                             └────────┬───────┘ └───┬──┘ └────┬────┘
-                                                                    collection tag ──────────────────┘             │         │
-                                                                  publication type ────────────────────────────────┘         │
+                                                                    collection tag ──────────────────┘             │         |
+                                                              publication type tag ────────────────────────────────┘         │
                                                              special key-value tag ──────────────────────────────────────────┘
 ```
+The completion marker, creation/completion date, priority, reference key and title may only appear in the order listed above in the diagram. In this way, items are guaranteed to appear in the following order after a lexicographical sort:
+1. Items with a priority and not marked complete
+2. Items without a priority and not marked complete
+3. Items marked complete
 
+The information in a `refs.txt` item is an intentionally terse representation of a bibliographic reference. The optional reference key is a human-readable identifier that is unique to each item and which is used to link to more comprehensive bibliographic information. The reference key should be the name of a directory containing any files related to the item, such as PDFs, notes, and BibTeX/RIS entries. 
+
+## refs.txt versus todo.txt
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
 * Creation dates are mandatory (Non-breaking change to ensure that items marked as 'completed' sort correctly)
 * Optional completion date must precede priority (Breaking change, but in practice already implemented, see e.g. [simpletask](https://github.com/mpcjanssen/simpletask-android))
@@ -28,7 +34,7 @@ As of the most recent release, refs.txt differs in syntax from [todo.txt](https:
 
 If you are already familiar with todo.txt, you will notice mainly semantic differences. The main reason for this specification is to describe how to represent data for the intended use case, namely reference management.
 
-* ## Why plain text?
+## Why plain text?
 
 Plain text is software and operating system agnostic. It's searchable, portable, lightweight, and easily manipulated. It's unstructured. It works when someone else's web server is down or your Outlook .PST file is corrupt. There's no exporting and importing, no databases or tags or flags or stars or prioritizing or _insert company name here_-induced rules on what you can and can't do with it.
 
