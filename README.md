@@ -40,9 +40,9 @@ If you are already familiar with todo.txt, you will notice mainly semantic diffe
 * Few dependencies (editor and/or basic command line utilities)
 * Extensible entry/search/filtering/manipulation using standard tools
 * Portability
-* Avoids lock-in / data conversion effort
-* Light on resources (Hello [Electron](https://www.electronjs.org/docs/latest))
-* Easy to version (e.g. using git)
+* Avoids lock-in / future data conversion effort
+* Light on resources (Hello, [Electron](https://www.electronjs.org/docs/latest))
+* Easy to version and share (e.g. using git)
 
 ## Examples
 ### Incomplete tasks
