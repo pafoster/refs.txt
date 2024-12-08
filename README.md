@@ -106,17 +106,8 @@ x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
 * The title may contain any number of special key-value tags, however no distinct key should occur more than once in the title.
 * Completion marker, start date, priority, end date, and title must be separated by the same whitespace character combination. It is recommended to use 1 space as the separator.
 * Tags must be separated by 1 or more whitespace characters. It is recommended to use 1 space as the separator.
-* With the exception of keys (which should consist of characters in the set [a-zA-Z] and which should be considered case-sensitive), tags may comprise all printable characters.
-
-  
+* With the exception of keys (which should consist of lowercase letters in the set [a-z]), tags may comprise all printable characters. Thus, topic and project tags 
+    
 ### Key-Value Tags
-
-Tool developers may define additional formatting rules for extra metadata.
-
-Developers should use the format `key:value` to define additional metadata (e.g. `due:2010-01-02` as a due date).
-
-TODO fix - Both `key` and `value` must consist of non-whitespace characters, which are not colons. Only one colon separates the `key` and `value`.
-
-TODO h:1 to hide an item
-TODO ! comment h:1 for comments
-TODO h:1 version:refs.txt_v1
+Tool developers may define functionality (e.g. formatting rules) around key-value tags. Common key-value tags are:
+* `h:1` specifies that an item should be hidden from view. We can use this to `pre-register` topic or project tags for auto-completion.
