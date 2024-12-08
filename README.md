@@ -76,9 +76,10 @@ At minimum, a valid item which has been marked as completed looks like this:
 ```
 x 2016-04-30 A Mathematical Theory of Communication
 ```
-Items may include an optional completion date:
+These are valid alternatives:
 ```
 x 2016-05-20 2016-04-30 A Mathematical Theory of Communication
+x 2016-05-20 (A) 2016-04-30 A Mathematical Theory of Communication
 ```
 None of these are valid items:
 ```
