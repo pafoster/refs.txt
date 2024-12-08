@@ -33,7 +33,7 @@ Lines in refs.txt are intentionally terse approximations of bibliographic refere
 |   |-- manuscript.txt
 |   |-- notes.txt
 |   `-- ref.bib
-...  (Other directories omitted)
+...  (Other directories omitted for brevity)
 ```
 ## refs.txt versus todo.txt
 As of the most recent release, refs.txt differs in syntax from [todo.txt](https://github.com/todotxt/todo.txt) as follows:
