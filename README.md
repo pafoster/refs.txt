@@ -1,5 +1,4 @@
 # refs.txt
-
 refs.txt is a fork of the [todo.txt](https://github.com/todotxt/todo.txt) plain text (human-readable) format specification. Whereas [todo.txt](https://github.com/todotxt/todo.txt) is intended for representing tasks and their priorities, refs.txt is intended for representing personal collections of bibliographic references (e.g. articles, theses, technical reports) with associated files (e.g. BibTeX entries, PDFs, notes). Both are intended for easy entry, search, filtering and manipulation using a text editor and/or basic command line utilities. In other words, refs.txt is a plain text and minimalist alternative to reference management software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/).
 
 Being a derivative of todo.txt, the central feature of refs.txt is that any given item in your collection is represented using a single (human-readable) line in your refs.txt file. Items have the following structure (diagram credit [dinosv](https://github.com/todotxt/todo.txt/pull/68)):
@@ -54,7 +53,7 @@ If you are already familiar with todo.txt, you will notice mainly semantic diffe
 * Easy to version and share (e.g. using git)
 
 ## Examples
-### Incomplete Tasks
+### Items Marked Incomplete
 At minimum, a valid item looks like this:
 ```
 2016-04-30 A Mathematical Theory of Communication
@@ -72,7 +71,18 @@ A Mathematical Theory of Communication
 2016-04-30 A Mathematical Theory of Communication #shannon1948mathematical #foo
  2016-04-30 A Mathematical Theory of Communication
 ```
-### Complete Tasks
+### Items Marked Complete
+At minimum, a valid item which has been marked as completed looks like this:
+```
+x 2016-05-20 2016-04-30 A Mathematical Theory of Communication
+```
+None of these are valid items:
+```
+x2016-05-20 2016-04-30 A Mathematical Theory of Communication
+x (A) 2016-05-20 2016-04-30 A Mathematical Theory of Communication
+ x 2016-05-20 2016-04-30 A Mathematical Theory of Communication
+```
+
 ## Format Specification
 
 ### Key-Value Tags
